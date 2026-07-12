@@ -1118,7 +1118,7 @@ a[link-w]:hover::before {
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 25%;
+    bottom: 12%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
