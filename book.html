@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book - Meech213</title>
+  <meta name="description" content="Book your photoshoot with Meech213. Deposits required to confirm booking.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <script src="https://use.typekit.net/cqf8cea.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <button class="back-btn visible" onclick="history.back()" aria-label="Go back">Back</button>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-grid">
+      <svg class="meech-time" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 200 90" fill="none">
+        <g fill="currentColor">
+          <text x="0" y="18" font-family="neue-haas-grotesk-display, -apple-system, sans-serif" font-size="14" font-weight="500" letter-spacing="0.02em">CREATIVE</text>
+          <text x="0" y="38" font-family="neue-haas-grotesk-display, -apple-system, sans-serif" font-size="14" font-weight="500" letter-spacing="0.02em">BY NATURE</text>
+        </g>
+      </svg>
+
+      <img class="logo" src="assets/icon.svg" alt="Meech logo">
+
+      <div class="social-links">
+        <a href="index.html" class="social-link" n-link>Home</a>
+        <a href="book.html" class="social-link" n-link>Book</a>
+        <a href="about.html" class="social-link" n-link>About</a>
+        <a href="photo.html" class="social-link" n-link>Photo</a>
+        <a href="video.html" class="social-link" n-link>Video</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="page-wrapper">
+    <div class="page-content">
+      <section class="book-section">
+        <h1 class="book-title">Book</h1>
+
+        <div class="book-content">
+          <div class="book-info">
+            <p>A deposit is required to secure and confirm your booking. Deposits must be made before the scheduled project start date. If a booking is cancelled, the deposit is NON-REFUNDABLE. Digital payments can be made via eSewa, Khalti, Bank Transfer, or Cash. The remaining balance is due on the agreed project start date unless otherwise discussed and confirmed in advance.</p>
+          </div>
+
+          <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">For any questions or project inquiries, use the booking form below. Messages are sent through EmailJS and configured with environment variables in your local <code>.env</code> file.</p>
+          <p style="font-size: 0.95rem;">* Project rates may vary depending on the scope, requirements, and timeline.<br>* A custom quotation will be provided after discussing your project.</p>
+         <br>
+          <!-- Booking Form -->
+          <form class="book-form" id="bookingForm" action="#" method="POST">
+            <input type="hidden" name="from_name" id="fromNameField" value="">
+            <input type="hidden" name="reply_to" id="replyToField" value="">
+            <div class="form-row">
+              <div class="field">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <label for="firstName">First Name *</label>
+              </div>
+              <div class="field">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                <label for="lastName">Last Name *</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <label for="email">Email Address *</label>
+              </div>
+              <div class="field">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                <label for="phone">Phone Number</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field wide">
+                <textarea id="message" name="message" rows="3" placeholder="Message" required></textarea>
+                <label for="message">Message *</label>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+            <p class="form-status" id="formStatus" aria-live="polite" style="margin-top: 1rem; font-size: 0.9rem;"></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-text">&copy; All rights reserved. 2026</div>
+      
+
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

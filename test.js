@@ -1,0 +1,10 @@
+const cx = 200, cy = 150;
+const ax = 200 + 120 * Math.cos(-20 * Math.PI / 180);
+const ay = 150 + 120 * Math.sin(-20 * Math.PI / 180);
+const w = 100 * 1.6;
+const h = 30 * 1.6;
+const tx = ax - w * 0.45;
+const ty = ay - h * 0.3;
+const dx1 = tx - cx;
+const dy1 = ty - cy;
+console.log(Math.atan2(dy1, dx1) * 180 / Math.PI, Math.sqrt(dx1*dx1 + dy1*dy1));
